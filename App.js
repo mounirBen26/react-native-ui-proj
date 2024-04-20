@@ -27,7 +27,7 @@ export default function App() {
     return null;
   }
   return (
-    <SafeAreaView className="flex flex-col items-center justify-center dark:bg-neutral-900">
+    <SafeAreaView className="flex flex-col p-5  dark:bg-neutral-900">
     
       <StatusBar style={colorScheme === 'dark'? 'light' : 'dark'} />
       <View onLayout={onLayoutRootView}>
