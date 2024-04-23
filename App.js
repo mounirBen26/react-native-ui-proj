@@ -13,8 +13,9 @@ import { useCallback } from 'react';
 export default function App() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
   //loading fonts
-  const [fontsLoaded,fontError] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     'MavenPro': require('./src/fonts/MavenPro-VariableFont_wght.ttf'),
+    'Jersey15':require('./src/fonts/Jersey15-Regular.ttf')
   })
   // using splash screen to load fonts
   const onLayoutRootView = useCallback(async () => {
@@ -28,14 +29,14 @@ export default function App() {
   }
   return (
     <SafeAreaView className="flex flex-col p-5  dark:bg-neutral-900">
-    
-      <StatusBar style={colorScheme === 'dark'? 'light' : 'dark'} />
+
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
       <View onLayout={onLayoutRootView}>
-      <View>
-        <Headers />
-        <Cards />
-        <Details />
-      </View>
+        <View>
+          <Headers />
+          <Cards />
+          <Details />
+        </View>
       </View>
     </SafeAreaView>
   );
